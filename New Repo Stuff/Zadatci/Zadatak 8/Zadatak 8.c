@@ -21,9 +21,19 @@ typedef struct tree
 } Tree;
 
 
+//Declaring a stack structure
+typedef struct stack
+{
+	struct tree* entity;
+	struct stack* next;
+
+} Stack;
+
+
 //Declaring necessary functions
 Tree* setup(Tree*);
 Tree* make(int);
+Stack* makeS(Stack*);
 Tree* insert(Tree*, int);
 Tree* search(Tree*, int);
 Tree* searchMin(Tree*);
@@ -32,7 +42,7 @@ Tree* erase(Tree*, int);
 int preorder(Tree*);
 int inorder(Tree*);
 int postorder(Tree*);
-//int levelorder(Tree*);
+int levelorder(Tree*);
 int menu(Tree*);
 
 
@@ -224,6 +234,109 @@ int postorder(Tree* root)
 	return EXIT_SUCCESS;
 }
 
+//Defining a function for making a 'stack' entry
+Stack* makeS(Tree* root)
+{
+	//Allocating space for 'stack' entry
+	Stack* Entry = (Stack*)malloc(sizeof(Stack));
+	
+	//Checking if allocation was successful
+	if (Entry != NULL)
+	{
+		Entry->next = NULL;
+		Entry->entity = root;
+		Entry->entity->left = root->left;
+		Entry->entity->right = root->right;
+
+		return Entry;
+	}
+	//If not, f u message
+	else
+	{
+		printf("Failed to allocate stack variable!");
+		return EXIT_FAILURE;
+	}
+
+}
+
+//Defining a function for printing in 'levelorder' mode
+int levelorder(Stack* startStack)
+{
+	//Declaring a static counter variable, a 'stack' variable and setting them up
+	static int onStack[2] = { 1, 0 };
+	Stack* stack = (Stack*)malloc(sizeof(Stack));
+
+	//Checking if allocation was successful
+	if (stack == NULL)
+	{
+		printf("Allocation failed!");
+		return EXIT_FAILURE;
+	}
+	//Setting stack up
+	else
+		stack->next = startStack;
+
+	//Setting a 'end of stack' variable up
+	static Stack* EOS = NULL;
+	EOS = stack->next;
+
+	//Setting up a trash variable for freeing space
+	static Stack* trash = NULL;
+
+	//Checking if the stack is empty
+	if (startStack != NULL && onStack[0] != 0)
+	{
+		//Updating EOS to be constantly freshly on the end of the stack
+		while (EOS->next != NULL)
+			EOS = EOS->next;
+
+		//Removing onStack[0] entries from the beginning of the stack
+		for (int i = 0; i < onStack[0]; i++)
+		{
+			//Adding entry to trash
+			trash = stack->next;
+			printf("%d ", trash->entity->val);
+
+			//Checking if entry has children, if so adding them to end of stack
+			if (trash->entity->left != NULL)
+			{
+				EOS->next = makeS(trash->entity->left);
+				EOS = EOS->next;
+				onStack[1]++;
+			}
+
+			if (trash->entity->right != NULL)
+			{
+				EOS->next = makeS(trash->entity->right);
+				EOS = EOS->next;
+				onStack[1]++;
+			}
+
+			//Freeing trash
+			stack->next = stack->next->next;
+			free(trash);
+		}
+
+		//Printing newline to indicate deeper level
+		printf("\n");
+
+		//Setting values of stack counter 
+		//for proper removal of entries in next pass
+		onStack[0] = onStack[1];
+		onStack[1] = 0;
+
+		//Recursive call of function for passing through tree
+		levelorder(stack->next);
+	}
+
+	//Resetting counter so it can be used
+	//in multiple passes of main function
+	onStack[0] = 1;
+	onStack[1] = 0;
+
+	return EXIT_SUCCESS;
+}
+
 //Defining menu function
 int menu(Tree* root)
 {
@@ -274,11 +387,11 @@ int menu(Tree* root)
 	case 6:
 		postorder(root);
 		break;
-		/*
+		
 	case 7:
-		levelorder(S);
+		levelorder(makeS(root));
 		break;
-		*/
+		
 	case 8:
 		return 0;
 		break;

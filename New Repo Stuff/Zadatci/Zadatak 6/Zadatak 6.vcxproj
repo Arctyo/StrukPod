@@ -127,9 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Zadatak 6 - improved.c" />
     <ClCompile Include="Zadatak 6.c" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="2021-02-02.txt" />
+    <Text Include="2021-02-10.txt" />
+    <Text Include="2022-10-20.txt" />
+    <Text Include="2022-12-12.txt" />
+    <Text Include="2023-10-20.txt" />
+    <Text Include="2024-01-01.txt" />
     <Text Include="racuni.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

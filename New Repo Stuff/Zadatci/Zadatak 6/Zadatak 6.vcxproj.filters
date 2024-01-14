@@ -18,8 +18,17 @@
     <ClCompile Include="Zadatak 6.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Zadatak 6 - improved.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="racuni.txt" />
+    <Text Include="2023-10-20.txt" />
+    <Text Include="2022-10-20.txt" />
+    <Text Include="2024-01-01.txt" />
+    <Text Include="2021-02-02.txt" />
+    <Text Include="2021-02-10.txt" />
+    <Text Include="2022-12-12.txt" />
   </ItemGroup>
 </Project>

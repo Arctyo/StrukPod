@@ -1,20 +1,26 @@
 ﻿  Zadatak 8.c
-C:\Users\TPC\Desktop\Zadatak 8\Zadatak 8.c(9,1): warning C4005: 'EXIT_SUCCESS': macro redefinition
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(9,1): warning C4005: 'EXIT_SUCCESS': macro redefinition
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h(52,1):
   see previous definition of 'EXIT_SUCCESS'
   
-C:\Users\TPC\Desktop\Zadatak 8\Zadatak 8.c(10,1): warning C4005: 'EXIT_FAILURE': macro redefinition
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(10,1): warning C4005: 'EXIT_FAILURE': macro redefinition
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h(53,1):
   see previous definition of 'EXIT_FAILURE'
   
-C:\Users\TPC\Desktop\Zadatak 8\Zadatak 8.c(102,34): warning C4047: ':': 'Tree *' differs in levels of indirection from 'int'
-C:\Users\TPC\Desktop\Zadatak 8\Zadatak 8.c(105,57): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
-C:\Users\TPC\Desktop\Zadatak 8\Zadatak 8.c(106,55): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
-C:\Users\TPC\Desktop\Zadatak 8\Zadatak 8.c(123,57): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
-C:\Users\TPC\Desktop\Zadatak 8\Zadatak 8.c(124,55): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
-C:\Users\TPC\Desktop\Zadatak 8\Zadatak 8.c(134,60): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
-C:\Users\TPC\Desktop\Zadatak 8\Zadatak 8.c(143,63): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
-C:\Users\TPC\Desktop\Zadatak 8\Zadatak 8.c(152,56): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
-C:\Users\TPC\Desktop\Zadatak 8\Zadatak 8.c(153,54): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
-C:\Users\TPC\Desktop\Zadatak 8\Zadatak 8.c(249,56): warning C4047: ':': 'Tree *' differs in levels of indirection from 'int'
-  Zadatak 8.vcxproj -> C:\Users\TPC\Desktop\Zadatak 8\x64\Debug\Zadatak 8.exe
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(112,34): warning C4047: ':': 'Tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(115,57): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(116,55): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(133,57): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(134,55): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(144,60): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(153,63): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(162,56): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(163,54): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(188,28): warning C4047: 'function': 'Tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(188,28): warning C4024: 'erase': different types for formal and actual parameter 1
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(188,39): warning C4047: 'function': 'int' differs in levels of indirection from 'tree *'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(188,39): warning C4024: 'erase': different types for formal and actual parameter 2
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(240,20): warning C4028: formal parameter 1 different from declaration
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(252,23): warning C4028: formal parameter 1 different from declaration
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(345,56): warning C4047: ':': 'Tree *' differs in levels of indirection from 'int'
+  Zadatak 8.vcxproj -> C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\x64\Debug\Zadatak 8.exe

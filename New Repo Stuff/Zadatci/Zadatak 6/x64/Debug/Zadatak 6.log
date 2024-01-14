@@ -1,1 +1,14 @@
-﻿  Zadatak 6.vcxproj -> C:\ArcStuff\StrukPod\New Repo Stuff\Zadatci\Zadatak 6\x64\Debug\Zadatak 6.exe
+﻿  Zadatak 6 - improved.c
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 6\Zadatak 6 - improved.c(9,1): warning C4005: 'EXIT_SUCCESS': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h(52,1):
+  see previous definition of 'EXIT_SUCCESS'
+  
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 6\Zadatak 6 - improved.c(10,1): warning C4005: 'EXIT_FAILURE': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h(53,1):
+  see previous definition of 'EXIT_FAILURE'
+  
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 6\Zadatak 6 - improved.c(520,26): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[50]'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 6\Zadatak 6 - improved.c(520,26): warning C4024: 'searchList': different types for formal and actual parameter 2
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 6\Zadatak 6 - improved.c(520,37): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[50]'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 6\Zadatak 6 - improved.c(520,37): warning C4024: 'searchList': different types for formal and actual parameter 3
+  Zadatak 6.vcxproj -> C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 6\x64\Debug\Zadatak 6.exe
