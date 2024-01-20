@@ -10,6 +10,8 @@
 #define EXIT_FAILURE 404
 #define MAX 100
 
+//TODO: Fix your file reading you idiot
+
 
 //Declaring structure 'City'
 typedef struct city
@@ -42,7 +44,7 @@ typedef struct tree
 } Tree;
 
 
-//Declaring necessary functions
+//Declaring necessary functions for the a) part of the task
 Country* setCountry(char*);
 City* setCity(char*);
 FILE* setFile(char*);
@@ -51,6 +53,7 @@ Country* sortCi(Country*);
 int printData(Country*);
 int searchList(Country*);
 
+//Declaring necessary functions for the b) part of the task
 Tree* setRoot(Country*);
 Tree* makeKnot(Country*);
 Tree* insertKnot(Tree*, Country*);

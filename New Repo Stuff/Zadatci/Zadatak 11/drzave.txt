@@ -1,0 +1,5 @@
+COUNTRY_NAME	CITY_FILE
+America			AmericaC.txt
+Croatia			CroatiaC.txt
+Japan			JapanC.txt
+Italy			ItalyC.txt

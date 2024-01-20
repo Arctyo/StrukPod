@@ -1,0 +1,5 @@
+CITY_NAME	NUM_PPL
+Zagreb		1100000
+Split		1200000
+Rijeka		1210000
+Pula		2300000

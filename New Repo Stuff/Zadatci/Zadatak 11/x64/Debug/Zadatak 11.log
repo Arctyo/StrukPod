@@ -1,0 +1,12 @@
+﻿  Zadatak 11.c
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 11\Zadatak 11.c(9,1): warning C4005: 'EXIT_SUCCESS': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h(52,1):
+  see previous definition of 'EXIT_SUCCESS'
+  
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 11\Zadatak 11.c(10,1): warning C4005: 'EXIT_FAILURE': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h(53,1):
+  see previous definition of 'EXIT_FAILURE'
+  
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 11\Zadatak 11.c(177,47): warning C4047: '>': 'int' differs in levels of indirection from 'City *'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 11\Zadatak 11.c(207,52): warning C4133: 'function': incompatible types - from 'City *' to 'const char *'
+  Zadatak 11.vcxproj -> C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 11\x64\Debug\Zadatak 11.exe
