@@ -1,0 +1,5 @@
+CITY_NAME	NUM_PPL
+Las Vegas	1100000
+Los Angeles	1200000
+Dallas		1210000
+New York	2300000

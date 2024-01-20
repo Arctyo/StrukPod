@@ -1,0 +1,5 @@
+CITY_NAME	NUM_PPL
+Tokyo		1100000
+Osaka		1200000
+Sendai		1210000
+Hirosaki	2300000

@@ -1,0 +1,15 @@
+﻿  Zadatak 10.c
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 10\Zadatak 10.c(9,1): warning C4005: 'EXIT_SUCCESS': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h(52,1):
+  see previous definition of 'EXIT_SUCCESS'
+  
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 10\Zadatak 10.c(10,1): warning C4005: 'EXIT_FAILURE': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h(53,1):
+  see previous definition of 'EXIT_FAILURE'
+  
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 10\Zadatak 10.c(272,48): warning C4047: '>': 'int' differs in levels of indirection from 'City *'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 10\Zadatak 10.c(291,53): warning C4133: 'function': incompatible types - from 'City *' to 'const char *'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 10\Zadatak 10.c(435,42): warning C4047: ':': 'Tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 10\Zadatak 10.c(438,89): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 10\Zadatak 10.c(439,86): warning C4047: ':': 'tree *' differs in levels of indirection from 'int'
+  Zadatak 10.vcxproj -> C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 10\x64\Debug\Zadatak 10.exe

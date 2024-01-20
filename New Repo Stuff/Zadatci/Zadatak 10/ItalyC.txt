@@ -1,0 +1,5 @@
+CITY_NAME	NUM_PPL
+Firenca		1100000
+Bologna		1200000
+Milano		1210000
+Roma		2300000

@@ -20,7 +20,8 @@ C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 
 C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(188,28): warning C4024: 'erase': different types for formal and actual parameter 1
 C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(188,39): warning C4047: 'function': 'int' differs in levels of indirection from 'tree *'
 C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(188,39): warning C4024: 'erase': different types for formal and actual parameter 2
-C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(240,20): warning C4028: formal parameter 1 different from declaration
-C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(252,23): warning C4028: formal parameter 1 different from declaration
-C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(345,56): warning C4047: ':': 'Tree *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(238,20): warning C4028: formal parameter 1 different from declaration
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(257,3): warning C4047: 'return': 'Stack *' differs in levels of indirection from 'int'
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(263,23): warning C4028: formal parameter 1 different from declaration
+C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\Zadatak 8.c(376,56): warning C4047: ':': 'Tree *' differs in levels of indirection from 'int'
   Zadatak 8.vcxproj -> C:\Users\TPC\Desktop\StrukPod\StrukPod\New Repo Stuff\Zadatci\Zadatak 8\x64\Debug\Zadatak 8.exe
