@@ -11,6 +11,9 @@
 #define MAX 100
 
 
+//TODO: Fix file reading yet again REEEEEEEEEEEEEE
+
+
 //Declaring structure 'City'
 typedef struct city
 {
