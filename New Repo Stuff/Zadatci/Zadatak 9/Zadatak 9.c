@@ -16,7 +16,8 @@
 //Declaring binary tree structure
 typedef struct tree
 {
-	int val;
+	int CurrVal;
+	int OldVal;
 	struct tree* left;
 	struct tree* right;
 
@@ -29,8 +30,9 @@ Tree* make(int);
 Tree* insert(Tree*, int);
 Tree* erase(Tree*, int);
 FILE* setupFile(void);
-int replace(Tree*, FILE*);
+int replace(Tree*);
 int inorder(Tree*);
+int randN(Tree*, int);
 int menu(Tree*);
 
 
@@ -59,10 +61,12 @@ Tree* setup(Tree* root)
 		printf("Memory allocation failed\n");
 		return NULL;
 	}
+	//If it was successful, setting up the root node
 	else
 	{
 		printf("Enter value of root: ");
-		scanf("%d", &root->val);
+		scanf("%d", &root->CurrVal);
+		root->OldVal = 0;
 		root->left = NULL;
 		root->right = NULL;
 	}
@@ -84,7 +88,8 @@ Tree* make(int n)
 	else
 	{
 		//Setting up new entry
-		newEntry->val = n;
+		newEntry->CurrVal = n;
+		newEntry->OldVal = 0;
 		newEntry->left = NULL;
 		newEntry->right = NULL;
 
@@ -100,9 +105,9 @@ Tree* insert(Tree* root, int n)
 	(root == NULL) ? root = make(n) : 1;
 
 	//Checking position of value n in regards to value root->val
-	(n > root->val) ? root->left = insert(root->left, n) : 1;
-	(n < root->val) ? root->right = insert(root->right, n) : 1;
-	(n == root->val) ? root->val = n : 1;
+	(n > root->CurrVal) ? root->left = insert(root->left, n) : 1;
+	(n < root->CurrVal) ? root->right = insert(root->right, n) : 1;
+	(n == root->CurrVal) ? root->CurrVal = n : 1;
 
 	return root;
 }
@@ -111,10 +116,10 @@ Tree* insert(Tree* root, int n)
 Tree* erase(Tree* root, int n)
 {
 	//Finding the value to delete
-	(n > root->val) ? root->right = erase(root->right, n) : 1;
-	(n < root->val) ? root->left = erase(root->left, n) : 1;
+	(n > root->CurrVal) ? root->right = erase(root->right, n) : 1;
+	(n < root->CurrVal) ? root->left = erase(root->left, n) : 1;
 
-	if (n == root->val)
+	if (n == root->CurrVal)
 	{
 		//Making a temporary storage for root to delete
 		Tree* temp = root;
@@ -147,15 +152,21 @@ Tree* erase(Tree* root, int n)
 //Defining a function for summing up elements and replacing with root value
 int replace(Tree* root)
 {
-	int LR[2] = { 0 };
+	//Put current value into "return slot" by the name of 'OldVal'
+	//Set CurrVal to 0 to remove potential conflict of values and wrong calculation
+	root->OldVal = root->CurrVal;
+	root->CurrVal = 0;
 
-	if (root == NULL)
-		return 0;
+	//If there are left members, calculate their sum before returning it to root's current value
+	if (root->left != NULL)
+		root->CurrVal += replace(root->left);
 
-	(root->right != NULL) ? replace(root->right) : 1;
-	(root->left != NULL) ? replace(root->left) : 1;
+	//If there are right members, calculate their sum before returning it to root's current value
+	if (root->right != NULL)
+		root->CurrVal += replace(root->right);
 
-	return 0;
+	//The return sum is the sum of children, stored in 'CurrVal' + the old value of the parent, stored in 'OldVal'
+	return root->CurrVal+root->OldVal;
 }
 
 //Defining a function for setting up file pointer
@@ -180,9 +191,33 @@ int inorder(Tree* root, FILE* file)
 	if (root != NULL && file != NULL)
 	{
 		inorder(root->right, file);
-		fprintf(file, "%d\n", root->val);
+		fprintf(file, "%d\n", root->CurrVal);
 		inorder(root->left, file);
 	}
+
+	return EXIT_SUCCESS;
+}
+
+//Defining a function for generating 'val' numbers randomly in range (10, 90)
+int randN(Tree* root, int val)
+{
+	//Generating space for array of 'val' numbers and making an index variable
+	int* genArr = (int*)malloc(val * sizeof(int));
+	int i = 0;
+
+	//Checking if the allocation was successful
+	if (genArr == NULL)
+	{
+		printf("Failed to make array!");
+		return NULL;
+	}
+	//Else, generate random numbers and fill genArr with them
+	for (i; i < val; i++)
+	{
+		genArr[i] = (int)rand(time(0)) % (90 - 10 + 1) + 10;
+		root = insert(root, genArr[i]);
+	}
+
 
 	return EXIT_SUCCESS;
 }
@@ -191,7 +226,7 @@ int inorder(Tree* root, FILE* file)
 int menu(Tree* root)
 {
 	//Declaring a choice and value variable and file pointer variable
-	int c, val;
+	int c = 0, val = 0;
 	FILE* file = NULL;
 
 	printf("\nList of possible options:\n");
@@ -199,7 +234,8 @@ int menu(Tree* root)
 	printf("1 - Insert new value\n");
 	printf("2 - Write inorder to file\n");
 	printf("3 - Sum up and replace\n");
-	printf("4 - Exit program\n");
+	printf("4 - Generate numbers and make tree\n");
+	printf("5 - Exit program\n");
 
 	printf("Which option do you choose? ");
 	scanf("%d", &c);
@@ -223,7 +259,10 @@ int menu(Tree* root)
 		break;
 
 	case 4:
-		return 0;
+		printf("How many numbers would you like to generate?\n");
+		printf("NOTE: the numbers will only be in range of 10 to 90: \n");
+		scanf("%d", &val);
+		randN(root, val);
 		break;
 
 	default:
